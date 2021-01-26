@@ -1,4 +1,5 @@
-# JogoAnimaisJOptionPane
+# Jogo de Animais com JOptionPane
+
 Jogo criado para processo seletivo da empresa Vector.
 
 ![](/FinalScore.png)
