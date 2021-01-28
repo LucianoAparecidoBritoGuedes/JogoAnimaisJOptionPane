@@ -10,6 +10,6 @@ Em seguida, foi feito todo o código do projeto na classe principal, de maneira 
 
 ![](/ActivityDiagram.png)
 
-Após todos os todos os nós serem criados e estarem funcionando estaticamente no método main foi adicionado a orientação a objetos contendo abastração, polimorfismo, sobrecarga, sobreescrita e encapsulamento. O conceito de herança não foi implementado explicitamente por não haver a necessidade.
+Após todos os nós serem criados e estarem funcionando estaticamente no método main foi adicionado a orientação a objetos contendo abastração, polimorfismo, sobrecarga, sobreescrita e encapsulamento. O conceito de herança não foi implementado explicitamente por não haver a necessidade.
 
 Projeto concluido!
