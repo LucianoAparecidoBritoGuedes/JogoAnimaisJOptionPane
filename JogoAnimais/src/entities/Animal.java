@@ -32,6 +32,4 @@ public class Animal {
 	public String toString() {
 		return name + " é um animal " + habitat + ".";
 	}
-	
-	
 }

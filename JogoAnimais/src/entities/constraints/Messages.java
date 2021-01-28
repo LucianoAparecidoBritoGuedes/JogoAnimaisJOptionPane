@@ -21,7 +21,7 @@ public final class Messages {
 			} else {
 				JOptionPane.showMessageDialog(frame, "Que pena! Dessa vez quem levou a melhor foi o "
 						+ player + " com " + score + " pontos.\n"
-						+ "Vamos continuar? Talvez na próxima você ganha!",
+						+ "Vamos continuar? Talvez na próxima você ganhe!",
 						"Pontuação Final", JOptionPane.INFORMATION_MESSAGE);
 			}
 		} else {

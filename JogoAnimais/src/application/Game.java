@@ -30,24 +30,26 @@ public class Game {
 
 		do {			
 			JOptionPane.showMessageDialog(frame, "Pense em um animal!", Messages.TITLE, JOptionPane.INFORMATION_MESSAGE);
-			int result = JOptionPane.showConfirmDialog(frame, "O Animal que você pensou é aquático?", Messages.TITLE, JOptionPane.YES_NO_OPTION);	
-						
+			int result = JOptionPane.showConfirmDialog(frame, "O Animal que você pensou é aquático?", Messages.TITLE, JOptionPane.YES_NO_OPTION);		
 			//animal aquático?
-			if(result == JOptionPane.YES_OPTION) {
+			switch (result) {
+			case JOptionPane.YES_OPTION:
 				for(int i=0; i<=animalList1.size(); i++) {	
 					if (i<animalList1.size()) {	
 						int result1 = JOptionPane.showConfirmDialog(null, "O Animal que você pensou é um(a) " 
-									+ animalList1.get(i).getName() + "?", Messages.TITLE, JOptionPane.YES_NO_OPTION);						
-						if(result1 == JOptionPane.YES_OPTION) {
+									+ animalList1.get(i).getName() + "?", Messages.TITLE, JOptionPane.YES_NO_OPTION);
+						switch (result1) {
+						case JOptionPane.YES_OPTION:
 							JOptionPane.showMessageDialog(frame, Messages.WINNER_1);
 							player1.setTotalValue(player1.getTotalValue()+1);
 							break;
-						} else if(result1 == JOptionPane.NO_OPTION) {
-							continue;							
-						} else {
-							System.exit(0);
+						case JOptionPane.NO_OPTION:
+							continue;
+						default:
+							control = proceed(frame, Messages.TITLE);
 							break;
 						}
+						break;
 					} else {
 						String animal = JOptionPane.showInputDialog(frame, "Em qual animal você pensou?");
 						if(animal != null || animal != "") {
@@ -58,21 +60,24 @@ public class Game {
 						break;
 					}
 				}
-			} else if(result == JOptionPane.NO_OPTION) {
+				break;
+			case JOptionPane.NO_OPTION:
 				for(int i=0; i<=animalList2.size(); i++) {	
 					if (i<animalList2.size()) {	
 						int result1 = JOptionPane.showConfirmDialog(null, "O Animal que você pensou é um(a) " 
 									+ animalList2.get(i).getName() + "?", Messages.TITLE, JOptionPane.YES_NO_OPTION);						
-						if(result1 == JOptionPane.YES_OPTION) {
+						switch (result1) {
+						case JOptionPane.YES_OPTION:
 							JOptionPane.showMessageDialog(frame, Messages.WINNER_1);
 							player1.setTotalValue(player1.getTotalValue()+1);
 							break;
-						} else if(result1 == JOptionPane.NO_OPTION) {
-							continue;							
-						} else {
-							System.exit(0);
+						case JOptionPane.NO_OPTION:
+							continue;
+						default:
+							control = proceed(frame, Messages.TITLE);
 							break;
 						}
+						break;
 					} else {
 						String animal = JOptionPane.showInputDialog(frame, "Em qual animal você pensou?");
 						if(animal != null || animal != "") {
@@ -83,11 +88,13 @@ public class Game {
 						break;
 					}
 				}
-			} else {
-				System.exit(0);
+				break;
+			default:
+				control = proceed(frame, Messages.TITLE);
+				break;
 			}
 			
-			JOptionPane.showMessageDialog(frame, "Pontuação atual:\n"
+			JOptionPane.showMessageDialog(frame, "Pontuação atual:\n\n"
 					+ player1.getName() + ": " + player1.getTotalValue() + "\n"
 					+ player2.getName() + ": " + player2.getTotalValue() + "\n", 
 					"Pontuação Atual", JOptionPane.INFORMATION_MESSAGE);
@@ -108,7 +115,7 @@ public class Game {
 	
 	//metodo para obter resposta de continuidade 
 	private static boolean proceed(JFrame frame, String TITLE) {
-		int continuar = JOptionPane.showConfirmDialog(frame, "Deseja continuar jogando?", TITLE, JOptionPane.YES_NO_OPTION);
+		int continuar = JOptionPane.showConfirmDialog(frame, "Deseja continuar jogando?\n", TITLE, JOptionPane.YES_NO_OPTION);
 		if(continuar == JOptionPane.YES_OPTION) {
 			return true;
 		} else {
