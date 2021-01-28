@@ -8,6 +8,8 @@ public final class Messages {
 	public static final String TITLE = "Jogo de Adivinhação de Animais";
 	public static final String WINNER_1 = "Eu venci!";
 	public static final String WINNER_2 = "Parabéns, você venceu!";
+	public static final String HABITAT1 = "Aquático";
+	public static final String HABITAT2 = "Terrestre";
 	
 	//metodo para informar o placar final do jogo
 	public static void finalScoreMessage(JFrame frame, String player, int score) {
