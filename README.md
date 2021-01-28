@@ -12,4 +12,6 @@ Em seguida, foi feito todo o código do projeto na classe principal, de maneira 
 
 Após todos os nós serem criados e estarem funcionando estaticamente no método main foi adicionado a orientação a objetos contendo abastração, polimorfismo, sobrecarga, sobreescrita e encapsulamento. O conceito de herança não foi implementado explicitamente por não haver a necessidade.
 
+Este projeto foi desenvolvido utilizando a IDE Eclipse 2020-09 com JDK 11.
+
 Projeto concluido!
